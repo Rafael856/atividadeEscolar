@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Principal</title>
+    <style>
+        /* Estilo geral da página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Fundo escuro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white; /* Texto branco para contraste */
+            animation: fadeInBody 1s ease-out; /* Animação de entrada para o body */
+        }
+
+        /* Animação de fade-in para o body */
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Container para centralizar o conteúdo */
+        .container {
+            text-align: center;
+            background-color: #1e1e1e; /* Fundo escuro com contraste suave */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais forte */
+            width: 80%;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(30px); /* Inicia abaixo e transparente */
+            animation: slideUp 1s ease-out forwards 0.3s; /* Animação de deslizamento do container */
+        }
+
+        /* Animação de deslizamento para o container */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilo do título */
+        h1 {
+            color: #ffffff; /* Cor branca para o título */
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: fadeInTitle 1s ease-out forwards; /* Animação de fade-in para o título */
+        }
+
+        /* Animação de fade-in para o título */
+        @keyframes fadeInTitle {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilo dos links */
+        a {
+            font-size: 1.2rem;
+            color: #ffffff; /* Cor branca para os links */
+            text-decoration: none;
+            padding: 12px 25px; /* Aumentei o espaçamento do botão */
+            display: inline-block;
+            margin: 15px;
+            border-radius: 5px;
+            border: 2px solid #ffffff; /* Borda branca */
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            animation: pulse 1.5s infinite; /* Animação de pulso nos links */
+        }
+
+        /* Efeito hover para os links */
+        a:hover {
+            background-color: #ffffff; /* Cor branca para o fundo */
+            color: #121212; /* Texto preto no hover */
+            transform: scale(1.05); /* Efeito de aumento suave ao passar o mouse */
+        }
+
+        /* Animação de pulso nos links */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1); /* Aumenta um pouco */
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Animação na palavra 'maior' */
+        .maior {
+            display: inline-block;
+            animation: scaleUp 1.5s ease-out forwards, fadeIn 2s ease-out forwards;
+        }
+
+        /* Animação de escala e fade-in para a palavra maior */
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Linha horizontal */
+        hr {
+            margin: 20px 0;
+            border: 0;
+            border-top: 2px solid #ffffff; /* Linha branca */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>ETEC <span class="maior">Doutor hernandez emilío de aguilar.</span></h1>
+        <a href="conAluno.php">Aluno</a><br/>
+        <a href="conProfessor.php">Professor</a><br/>
+        <a href="conDisciplina.php">Disciplina</a><br/>
+        <a href="cadAluno.php">Codigo Aluno</a><br/>
+        <a href="cadProfessor.php">Codigo Professor</a><br/>
+    </div>
+
+</body>
+</html>
